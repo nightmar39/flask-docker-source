@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-docker
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: flask-docker
+  template:
+    metadata:
+      labels:
+        app: flask-docker
+    spec:
+      containers:
+      - image: docker.io/nightmar39/flask-docker:main
+        name: flask-docker
+        ports:
+        - containerPort: 5000
