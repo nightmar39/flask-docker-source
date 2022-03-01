@@ -14,7 +14,7 @@ spec:
         app: flask-docker
     spec:
       containers:
-      - image: docker.io/nightmar39/flask-docker:main
+      - image: docker.io/nightmar39/basic-flask-docker:v1
         name: flask-docker
         ports:
         - containerPort: 5000
